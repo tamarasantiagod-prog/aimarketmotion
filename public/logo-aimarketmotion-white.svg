@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" fill="none">
+  <!-- Icon: orbital circle with bar chart -->
+  <g transform="translate(10, 10)">
+    <circle cx="50" cy="50" r="44" stroke="url(#grad2)" stroke-width="3.5" fill="none" stroke-dasharray="220 60" stroke-linecap="round"/>
+    <circle cx="50" cy="50" r="32" fill="rgba(255,255,255,0.08)"/>
+    <rect x="34" y="44" width="8" height="16" rx="2" fill="url(#grad2)"/>
+    <rect x="46" y="36" width="8" height="24" rx="2" fill="url(#grad2)"/>
+    <rect x="58" y="40" width="8" height="20" rx="2" fill="url(#grad2)"/>
+    <path d="M82 14 L84 20 L90 22 L84 24 L82 30 L80 24 L74 22 L80 20 Z" fill="#A2D149"/>
+    <path d="M16 72 L17.5 76 L22 77.5 L17.5 79 L16 83 L14.5 79 L10 77.5 L14.5 76 Z" fill="#A2D149" opacity="0.7"/>
+    <circle cx="50" cy="6" r="4" fill="#A2D149"/>
+    <circle cx="94" cy="50" r="3" fill="#A2D149" opacity="0.6"/>
+  </g>
+  <rect x="118" y="38" width="30" height="22" rx="5" fill="#A2D149"/>
+  <text x="133" y="54" font-family="'Arial Black', Arial, sans-serif" font-size="12" font-weight="900" fill="#0F172A" text-anchor="middle" letter-spacing="0.5">AI</text>
+  <text x="156" y="62" font-family="'Arial Black', Arial, sans-serif" font-size="34" font-weight="900" fill="#FFFFFF" letter-spacing="-0.5">MARKET</text>
+  <text x="156" y="82" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="rgba(255,255,255,0.55)" letter-spacing="6">MOTION</text>
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A2D149"/>
+      <stop offset="100%" stop-color="#5CB85C"/>
+    </linearGradient>
+  </defs>
+</svg>

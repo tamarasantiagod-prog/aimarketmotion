@@ -1,13 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--surface)]">
       <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
         <div>
-          <div className="flex items-center gap-2 font-bold text-lg mb-3">
-            <span className="inline-block w-6 h-6 rounded-md" style={{ background: "var(--green)" }} />
-            <span>Market<span style={{ color: "var(--purple)" }}>Motion</span></span>
+          <div className="mb-3">
+            <Image src="/logo-aimarketmotion-dark.svg" alt="AI MarketMotion" width={180} height={42} className="h-8 w-auto" />
           </div>
           <p className="text-sm text-[var(--foreground-muted)] leading-relaxed">
             GTM strategy, AI enablement, and senior PMM expertise for growing businesses.

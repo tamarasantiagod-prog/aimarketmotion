@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -15,9 +16,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--border)]">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl text-[var(--foreground)]">
-          <span className="inline-block w-7 h-7 rounded-lg" style={{ background: "var(--green)" }} />
-          <span>Market<span style={{ color: "var(--purple)" }}>Motion</span></span>
+        <Link href="/" aria-label="AI MarketMotion — Home">
+          <Image src="/logo-aimarketmotion-dark.svg" alt="AI MarketMotion" width={240} height={56} className="h-10 w-auto" priority />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
