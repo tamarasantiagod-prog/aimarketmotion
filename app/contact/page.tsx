@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, ExternalLink, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, ExternalLink, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,46 +30,46 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
-          {/* Left — booking */}
-          <div>
-            <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Book a free discovery call</h2>
-
-            {/* Calendly placeholder */}
-            <div className="card border-2 border-dashed border-[var(--border)] text-center py-16 mb-6">
-              <Clock className="w-10 h-10 mx-auto mb-3" style={{ color: "var(--purple)" }} />
-              <p className="font-semibold text-[var(--foreground)] mb-2">Calendly booking coming soon</p>
-              <p className="text-sm text-[var(--foreground-muted)] mb-6">
-                While I set up the booking link, drop me an email and I'll reply within 24 hours.
-              </p>
-              <a href="mailto:tamara@aimarketmotion.com" className="btn-primary">
-                <Mail className="w-4 h-4" /> Email me directly
-              </a>
-            </div>
-
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-sm">
-                <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "var(--green-dark)" }} />
-                <span className="text-[var(--foreground-muted)]">30 minutes — no obligation</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "var(--green-dark)" }} />
-                <span className="text-[var(--foreground-muted)]">Video call (Google Meet or Zoom)</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "var(--green-dark)" }} />
-                <span className="text-[var(--foreground-muted)]">I'll reply within 24 hours</span>
-              </div>
-            </div>
+      {/* Calendly embed — full width */}
+      <section className="bg-white py-16 border-b border-[var(--border)]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">Book your free 30-minute call</h2>
+            <p className="text-[var(--foreground-muted)]">Pick a time that works for you — no obligation, no sales pitch.</p>
           </div>
+          <div className="flex gap-4 justify-center mb-6 text-sm text-[var(--foreground-muted)]">
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4" style={{ color: "var(--green-dark)" }} /> 30 minutes
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4" style={{ color: "var(--green-dark)" }} /> Video call
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4" style={{ color: "var(--green-dark)" }} /> No obligation
+            </span>
+          </div>
+          {/* Calendly inline widget */}
+          <div
+            className="calendly-inline-widget rounded-xl overflow-hidden border border-[var(--border)]"
+            data-url="https://calendly.com/tamara-downes-aimarketmotion/30min?hide_gdpr_banner=1&primary_color=7c3aed"
+            style={{ minWidth: "320px", height: "700px" }}
+          />
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            async
+          />
+        </div>
+      </section>
 
-          {/* Right — other ways + FAQ */}
+      {/* Contact options + FAQ */}
+      <section className="py-20 bg-[var(--surface)]">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
           <div>
             <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Other ways to reach me</h2>
-            <div className="space-y-4 mb-12">
+            <div className="space-y-4">
               <a href="mailto:tamara@aimarketmotion.com"
-                className="flex items-center gap-4 p-4 rounded-lg border border-[var(--border)] hover:border-[var(--purple)] transition-colors group">
+                className="flex items-center gap-4 p-4 rounded-lg border border-[var(--border)] bg-white hover:border-[var(--purple)] transition-colors group">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "var(--purple-light)" }}>
                   <Mail className="w-5 h-5" style={{ color: "var(--purple)" }} />
                 </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 </div>
               </a>
               <a href="https://www.linkedin.com/in/tamarasantiago" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-lg border border-[var(--border)] hover:border-[var(--purple)] transition-colors group">
+                className="flex items-center gap-4 p-4 rounded-lg border border-[var(--border)] bg-white hover:border-[var(--purple)] transition-colors group">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "var(--purple-light)" }}>
                   <ExternalLink className="w-5 h-5" style={{ color: "var(--purple)" }} />
                 </div>
@@ -89,7 +89,9 @@ export default function ContactPage() {
                 </div>
               </a>
             </div>
+          </div>
 
+          <div>
             <h2 className="text-xl font-bold text-[var(--foreground)] mb-5">Common questions</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
