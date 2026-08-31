@@ -68,14 +68,14 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Other ways to reach me</h2>
             <div className="space-y-4">
-              <a href="mailto:tamara@aimarketmotion.com"
+              <a href="mailto:tamara.downes@aimarketmotion.com"
                 className="flex items-center gap-4 p-4 rounded-lg border border-[var(--border)] bg-white hover:border-[var(--purple)] transition-colors group">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "var(--purple-light)" }}>
                   <Mail className="w-5 h-5" style={{ color: "var(--purple)" }} />
                 </div>
                 <div>
                   <p className="font-medium text-[var(--foreground)] group-hover:text-[var(--purple)] transition-colors">Email</p>
-                  <p className="text-sm text-[var(--foreground-muted)]">tamara@aimarketmotion.com</p>
+                  <p className="text-sm text-[var(--foreground-muted)]">tamara.downes@aimarketmotion.com</p>
                 </div>
               </a>
               <a href="https://www.linkedin.com/in/tamarasantiago" target="_blank" rel="noopener noreferrer"

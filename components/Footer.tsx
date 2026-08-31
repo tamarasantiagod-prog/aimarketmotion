@@ -32,9 +32,9 @@ export function Footer() {
 
         <div>
           <p className="text-sm font-semibold text-[var(--foreground)] mb-3">Get in touch</p>
-          <a href="mailto:tamara@aimarketmotion.com"
+          <a href="mailto:tamara.downes@aimarketmotion.com"
             className="text-sm text-[var(--foreground-muted)] hover:text-[var(--purple)] transition-colors block mb-2">
-            tamara@aimarketmotion.com
+            tamara.downes@aimarketmotion.com
           </a>
           <a href="https://www.linkedin.com/in/tamarasantiago" target="_blank" rel="noopener noreferrer"
             className="text-sm text-[var(--foreground-muted)] hover:text-[var(--purple)] transition-colors">
