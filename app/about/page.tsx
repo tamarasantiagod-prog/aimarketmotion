@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin, GraduationCap, Building2 } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -43,14 +44,15 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="w-64 h-64 rounded-2xl bg-[var(--surface2)] border border-[var(--border)] flex items-center justify-center overflow-hidden">
-              <div className="text-center text-[var(--foreground-subtle)]">
-                <div className="w-20 h-20 rounded-full mx-auto mb-3" style={{ background: "var(--purple-light)" }} />
-                <p className="text-sm font-medium">Tamara Santiago Downes</p>
-                <p className="text-xs text-[var(--foreground-subtle)] flex items-center justify-center gap-1 mt-1">
-                  <MapPin className="w-3 h-3" /> London, UK
-                </p>
-              </div>
+            <div className="w-64 h-64 rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm">
+              <Image
+                src="/portrait.jpg"
+                alt="Tamara Santiago Downes"
+                width={256}
+                height={256}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
             </div>
           </div>
         </div>
