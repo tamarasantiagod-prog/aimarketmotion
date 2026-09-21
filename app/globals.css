@@ -12,6 +12,15 @@
   --green-dark: #7EB82A;
   --purple: #7C3AED;
   --purple-light: #EDE9FE;
+
+  /* dark surfaces (navbar, footer, homepage hero) */
+  --ink: #140E24;
+  --ink-2: #1E1636;
+  --ink-3: #2B2149;
+  --on-dark: #EDE9F8;
+  --on-dark-muted: #A9A1C4;
+  --line-dark: rgba(237, 233, 248, 0.13);
+  --violet-light: #AE85FF;
 }
 
 @theme inline {
@@ -19,7 +28,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-bricolage);
 }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* anchors land below the sticky header */
+[id] { scroll-margin-top: 5rem; }
 
 body {
   background: var(--background);
@@ -27,6 +46,15 @@ body {
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+h1, h2, h3 {
+  font-family: var(--font-bricolage), var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 4px; }
+.on-dark :focus-visible { outline-color: var(--green); }
 
 .btn-primary {
   display: inline-flex;
@@ -103,3 +131,34 @@ body {
   background: #ECFDE8;
   color: #3A7A0A;
 }
+
+/* ── site chrome (dark navbar + footer) ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--ink);
+  border-bottom: 1px solid var(--line-dark);
+}
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--on-dark-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.nav-link:hover { color: var(--on-dark); }
+
+.site-footer {
+  background: var(--ink);
+  border-top: 1px solid var(--line-dark);
+  color: var(--on-dark-muted);
+}
+.footer-link {
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+  color: var(--on-dark-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-link:hover { color: var(--green); }
